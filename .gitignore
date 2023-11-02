@@ -1,0 +1,112 @@
+# Node.js
+node_modules/
+
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Dependency directories
+bower_components/
+jspm_packages/
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn
+yarn-error.log
+.pnp.js
+.pnp/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm build'
+/build/
+
+# dotenv environment variables file
+.env
+
+# Editor directories and files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Mac directories
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows directories
+Thumbs.db
+ehthumbs.db
+
+# Windows thumbnail cache files
+ehthumbs_vista.db
+Thumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code directories
+.vscode/
+
+# Sublime Text directories and files
+.svn/
+.sublime-workspace
+.project
+*.tmproj
+
+# Gremlins
+.DS_Store?
+*~
+*.swp
+*.bak
+
+# IntelliJ directories
+.idea/
+
+# WebStorm directories
+.idea/
+
+# Microsoft's localDb files
+AppData/
+
+# Laravel Mix
+node_modules/
+public/mix-manifest.json
+public/hot
+
+# Vim
+.*.sw[a-z]
+.*.s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# npm
+npm-debug.log*
