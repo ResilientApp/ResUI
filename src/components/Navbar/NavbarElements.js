@@ -5,7 +5,7 @@ import {Link as LinkS} from 'react-scroll'
 export const Nav=styled.nav`
     background: #000;
     height: 80px;
-    // margin-top: -80px;
+    margin-top: -80px;
     // display: flex; //Changed by me to display logo on left most side
     justify-content: center;
     align-items:center;
@@ -77,7 +77,7 @@ export const NavLinks=styled(LinkS)`
     padding: 0 1rem;
     height:100%;
     cursor: pointer;
-    font-weight:bold;
+    
 
     &.active{
         border-bottom: 3px solid  #96DED1;
@@ -110,7 +110,7 @@ export const NavBtnLink= styled(LinkR)`
     font-weight:bold;
     &:hover{
         transition: all 0.2s ease-in-out;
-        background:#023436;
-        color: #000;
+        background:#fff;
+        color: #03B5AA;
     }
 `
