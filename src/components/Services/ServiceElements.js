@@ -8,9 +8,9 @@ export const ServicesContainer = styled.div`
     align-items: center;
     background: #010606;
 
-@media screen and (max-width: 768px){
-    height: 1100px;
-}
+    @media screen and (max-width: 768px){
+        height: 1100px;
+    }
 `
 
 export const ServicesWrapper= styled.div`

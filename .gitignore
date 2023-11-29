@@ -110,3 +110,6 @@ Session.vim
 
 # npm
 npm-debug.log*
+
+# Vid files
+*.mp4
