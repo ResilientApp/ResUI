@@ -1,16 +1,16 @@
 import React from 'react'
 import {Nav,NavbarContainer,NavLogo,MobileIcon,NavMenu,NavItem,NavLinks,NavBtn,NavBtnLink} from './NavbarElements'
 import {FaBars} from 'react-icons/fa'
-
+import logo from '../../images/logo.png'
 
 const Navbar = ({toggle}) => {
   return (
     <>
          <Nav> 
           <NavbarContainer>
-            <NavLogo to="/">       
-              ResilientDB
-            </NavLogo>
+            <NavLogo src={logo} />       
+              {/* ResilientDB
+            </NavLogo> */}
             <MobileIcon onClick={toggle}>
                 <FaBars/>
             </MobileIcon>
