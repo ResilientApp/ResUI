@@ -66,6 +66,7 @@ export const NavMenu=styled.ul`
     text-align:center;
     margin-left:50px;
     margin-right:-22px;
+    position: relative;
 
     @media screen and (max-width: 768px){
         display: none;
@@ -74,7 +75,28 @@ export const NavMenu=styled.ul`
 
 export const NavItem=styled.li`
     height:80px;
+    position: relative;
 `;
+
+export const NavDropdown = styled.div`
+  display: none;
+  position: absolute;
+  top: 80px; 
+  left: 0;
+  width: 200px; 
+  background: black;
+  color: #03B5AA;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+
+  ${NavItem}:hover & {
+    display: flex;
+    flex-direction: column;
+  }
+`;
+
+
 
 export const NavLinks=styled(LinkS)`
     color: #fff;
@@ -84,6 +106,10 @@ export const NavLinks=styled(LinkS)`
     padding: 0 1rem;
     height:100%;
     cursor: pointer;
+
+    ${NavItem}:hover & {
+        border-bottom: 6px solid  #03B5AA;
+      }
     
 
     &.active{
@@ -121,3 +147,17 @@ export const NavBtnLink= styled(LinkR)`
         color: #03B5AA;
     }
 `
+
+export const NavDropdownLinks = styled(LinkS)`
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px;
+  cursor: pointer;
+
+  &:hover {
+    background-color:  black; /* Add a background color on hover */
+    color: #03B5AA;
+  }
+`;
