@@ -36,6 +36,9 @@ const Navbar = ({toggle}) => {
                     <NavLinks to='contact'>Contact Us</NavLinks>
                 </NavItem>
                 <NavItem>
+                    <NavLinks to="/instances">My Instances</NavLinks>
+                </NavItem>
+                <NavItem>
                     <NavLinks to='/signup'>Sign Up</NavLinks>
                 </NavItem>
                 <NavBtn>

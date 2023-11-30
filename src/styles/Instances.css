@@ -1,0 +1,36 @@
+/* Instances.css */
+body {
+  background-color: black;
+  color: #fff; /* White text color */
+}
+
+div {
+  margin: 20px;
+}
+
+h2 {
+  color: #03b5aa; /* Teal text color */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #03b5aa; /* Teal background color for header */
+  color: #fff; /* White text color for header */
+}
+
+tr:hover {
+  background-color: #444; /* Darker background color on hover */
+}
+
+/* Add more styling as needed */
