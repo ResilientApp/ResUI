@@ -6,6 +6,7 @@ export const Nav=styled.nav`
     background: #000;
     height: 80px;
     margin-top: -80px;
+    margin-bottom: 80px;
     // display: flex; //Changed by me to display logo on left most side
     justify-content: center;
     align-items:center;
@@ -27,9 +28,11 @@ export const NavbarContainer=styled.div`
 `;
 
 export const NavLogo=styled.img`
-display:flex;
-align-items:center;
-margin-right: 24px;
+    width: 200px;
+    height: 70px;
+    display:flex;
+    align-items:center;
+    margin-right: 24px;
 `
 
 // export const NavLogo=styled(LinkR)`
@@ -96,9 +99,7 @@ export const NavDropdown = styled.div`
   }
 `;
 
-
-
-export const NavLinks=styled(LinkS)`
+export const NavLinks=styled(LinkR)`
     color: #fff;
     display:flex;
     align-items:center;
