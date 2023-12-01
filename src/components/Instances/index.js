@@ -1,17 +1,30 @@
-// Instances.js
 import React, { useState, useEffect } from 'react';
 import Navbar from '../Navbar';
 import '../../styles/Instances.css';
+import { jwtDecode } from "jwt-decode";
 
 const Instances = () => {
   const [instancesData, setInstancesData] = useState([]);
+  const userToken = localStorage.getItem('userToken');
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:5500/api/instances'); // Replace with your server's address
+        let decoded = jwtDecode(userToken);
+
+        const response = await fetch(`http://localhost:5500/api/instances?userEmail=${decoded.email}`, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${userToken}`,
+          },
+        }); 
+
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+
         const data = await response.json();
-        console.log(data);
         setInstancesData(data);
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -19,7 +32,7 @@ const Instances = () => {
     };
 
     fetchData();
-  }, []);
+  }, [userToken]);
 
   return (
     <>
