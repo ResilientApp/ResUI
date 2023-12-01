@@ -8,6 +8,7 @@ const app = express();
 const port = 5500;
 
 const uri = "mongo-uri";
+
 const client = new MongoClient(uri, {
   serverApi: {
     version: ServerApiVersion.v1,
