@@ -64,7 +64,7 @@ export const Heading = styled.h1`
     font-size: 48px;
     line-height: 1.1;
     font-weight: 600;
-    color: ${({ lighttext }) => (lighttext ? '#f7f8fa' : '#010606') }; // changed prop name
+    color: ${({ lightText }) => (lightText ? '#f7f8fa' : '#010606') }; // reverted the property name since it affected the display
 
     @media screen and (max-width: 480px){
         font-size: 32px;
@@ -76,7 +76,7 @@ export const Subtitle = styled.p`
     margin-bottom: 35px;
     font-size: 18px;
     line-height: 24px;
-    color: ${({ darktext }) => (darktext ? '#010606' : '#fff')}; // changed prop name
+    color: ${({ darkText }) => (darkText ? '#010606' : '#fff')}; // reverted the property name since it affected the display
 `;
 
 
