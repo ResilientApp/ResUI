@@ -15,6 +15,7 @@ import {
 } from "./NavbarElements";
 import logo from "../../images/logo.png";
 import { jwtDecode } from "jwt-decode";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ toggle }) => {
   const [user, setUser] = useState(getUserFromToken()); // Set user state
@@ -85,7 +86,9 @@ const Navbar = ({ toggle }) => {
                 </NavItem>
                 <NavItem>
                   <NavLinks>
-                  <span style={{ color: '#FFD700' }}>Welcome, {user}</span>
+                    <Link to="/instances" style={{ color: "#FFD700" }}>
+                      Welcome, {user}
+                    </Link>
                   </NavLinks>
                   <NavDropdown>
                     <NavDropdownLinks to="#" onClick={handleLogout}>
