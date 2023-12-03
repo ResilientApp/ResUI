@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import Navbar from '../Navbar'
 import Sidebar from '../Sidebar'
-import HeroSection from '../HeroSection'
 import Footer from '../Footer'
 import { MissionVision } from './MissionVision'
 import { MeetTheTeam } from './MeetTheTeam'

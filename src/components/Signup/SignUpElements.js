@@ -1,5 +1,4 @@
 import { styled, createGlobalStyle } from 'styled-components';
-import React from 'react';
 
 export const GlobalStyle = createGlobalStyle`
   body {
@@ -28,7 +27,8 @@ export const LogoImage = styled.img`
 `;
 
 export const SignUpForm = styled.form`
-  padding: 20px 0;
+  // padding: 20px 0;
+  margin: 5%;
   position: relative;
   text-align: center;
 `;

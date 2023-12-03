@@ -36,7 +36,7 @@ export const NavLogo = styled.img`
     align-items: center;
     margin-right: 24px;
     &.left-logo {
-        position: absolute;
+        // position: absolute;
         left: 25px;
     }
 `;

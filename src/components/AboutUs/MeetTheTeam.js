@@ -1,4 +1,5 @@
-import {styled} from 'styled-components'
+import { styled } from 'styled-components'
+import { AboutH1 } from './AboutUsElements'
 import React from 'react';
 
 
@@ -22,7 +23,7 @@ const TeamMember = styled.div`
 export function MeetTheTeam() {
     return (
         <>
-            <h1>MEET THE TEAM</h1>
+            <AboutH1>MEET THE TEAM</AboutH1>
         </>
     )
 }
