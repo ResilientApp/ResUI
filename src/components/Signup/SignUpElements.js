@@ -15,10 +15,10 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const ImageContainer = styled.div`
-    margin-top: 10%;
+    margin-top: 5 %;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 5%;
+    margin-bottom: 2%;
     padding: 0;
     text-align: center;
 `;
@@ -79,7 +79,7 @@ export const ButtonsContainer = styled.div`
     align-items: center;
     justify-content: center;
     grid-gap: 20px;
-    padding: 1%;
+    padding-top: 2%;
 `;
 
 const ButtonsWrapper = styled.button`

@@ -27,10 +27,11 @@ export const NavbarContainer=styled.div`
 `;
 
 export const NavLogo=styled.img`
-display:flex;
-align-items:center;
-margin-right: 24px;
-`
+    display:flex;
+    align-items:center;
+    margin-right: 24px;
+    height: 75px;
+`;
 
 // export const NavLogo=styled(LinkR)`
 //     color: #03B5AA;
@@ -126,7 +127,7 @@ export const NavBtn=styled.nav`
     @media screen and (max-width: 768px){
         display:none;
     }
-`
+`;
 
 export const NavBtnLink= styled(LinkR)`
     border-radius: 50px;
@@ -146,7 +147,7 @@ export const NavBtnLink= styled(LinkR)`
         background:#fff;
         color: #03B5AA;
     }
-`
+`;
 
 export const NavDropdownLinks = styled(LinkS)`
   color: #fff;
