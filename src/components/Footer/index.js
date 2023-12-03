@@ -11,10 +11,10 @@ const Footer = () => {
             <FooterLinksWrapper>
                 <FooterLinkItems>
                     <FooterLinkTitle>About Us</FooterLinkTitle>
-                        <FooterLink to="/signin">ExpoLab Blog</FooterLink>
-                        <FooterLink to="/signin">Meet the Team</FooterLink>
-                        <FooterLink to="/signin" >Github</FooterLink>
-                        <FooterLink to="/signin">Terms of Services</FooterLink>
+                        <FooterLink to="https://expolab.org/">ExpoLab Blog</FooterLink>
+                        <FooterLink to="/about">Meet the Team</FooterLink>
+                        <FooterLink to="https://github.com/resilientdb/resilientdb">Github</FooterLink>
+                        <FooterLink to="https://expolab.org/#service">Terms of Services</FooterLink>
                 </FooterLinkItems>
 
                 {/* <FooterLinkItems>
@@ -29,8 +29,8 @@ const Footer = () => {
             <FooterLinksWrapper>
                 <FooterLinkItems>
                     <FooterLinkTitle>Contact Us</FooterLinkTitle>
-                        <FooterLink to="/signin">Contact</FooterLink>
-                        <FooterLink to="/signin">Support</FooterLink>
+                        <FooterLink to="/about">Contact</FooterLink>
+                        <FooterLink to="/about">Support</FooterLink>
                 </FooterLinkItems>
             {/* to add social media links */}
             {/* <FooterLinkItems>
@@ -46,7 +46,7 @@ const Footer = () => {
                 <SocialLogo to='/'>
                     ResilientDB
                 </SocialLogo>
-                <WebsiteRights>ResilientDB © {new Date().getFullYear()} 
+                <WebsiteRights>ResilientDB © {new Date().getFullYear() + " "} 
                     All rights reserved.
                 </WebsiteRights>
                 <SocialIcons>

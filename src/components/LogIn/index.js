@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import resilientDBLogo from '../../images/resilientdb_logo.svg';
 import { GlobalStyle, ImageContainer, LogoImage, SignUpForm, SignUpH2, SignUpInput, ButtonsContainer, SignUpButtons } from '../Signup/SignUpElements';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom'; 
 
 const LogIn = () => {
   const [email, setEmail] = useState('');
