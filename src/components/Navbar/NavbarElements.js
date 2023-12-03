@@ -28,13 +28,6 @@ export const NavbarContainer = styled.div`
     max-width: 1100px;
 `;
 
-<<<<<<< HEAD
-export const NavLogo=styled.img`
-    display:flex;
-    align-items:center;
-    margin-right: 24px;
-    height: 75px;
-=======
 
 export const NavLogo = styled.img`
     width: 200px;
@@ -46,7 +39,6 @@ export const NavLogo = styled.img`
         position: absolute;
         left: 25px;
     }
->>>>>>> ab82023d110e76e4cf532109dce741e85fe0b76a
 `;
 
 // export const NavLogo=styled(LinkR)`

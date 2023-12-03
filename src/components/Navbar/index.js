@@ -46,7 +46,8 @@ const Navbar = ({ toggle }) => {
     <>
       <Nav>
         <NavbarContainer>
-          <NavLogo src={logo} className="left-logo" />
+          {/* <Link to="/"><NavLogo src={logo}  className="left-logo"/></Link> */}
+          <NavLogo src={logo}  className="left-logo"/>
           {/* ResilientDB
             </NavLogo> */}
           <MobileIcon onClick={toggle}>
