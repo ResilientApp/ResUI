@@ -3,6 +3,8 @@ import './App.css';
 import Home from './pages';
 import { SignUpPage, LogInPage } from './pages/signup';
 import AboutUsPage from './pages/aboutus';
+// import { InstancesPage } from './pages/instances';
+
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
 
@@ -16,8 +18,8 @@ function App() {
         <Route path="/about" element={<AboutUsPage />} exact />
           {/* <Route path="/about/meet-the-team" element={<MeetTheTeamPage />} exact /> */}
         {/* </Route> */}
+        {/* <Route path="/instances" element={<InstancesPage />} exact /> */}
       </Routes>
-      
     </Router>
   );
 }
