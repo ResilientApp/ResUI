@@ -4,7 +4,7 @@ import Home from './pages';
 import {RoadMapPage} from './pages/roadmap';
 import { SignUpPage, LogInPage } from './pages/signup';
 import AboutUsPage from './pages/aboutus';
-// import { InstancesPage } from './pages/instances';
+import Instances from './components/Instances';
 
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
@@ -21,6 +21,7 @@ function App() {
         {/* </Route> */}
         <Route path="/roadmap" element={<RoadMapPage />} exact />
         {/* <Route path="/instances" element={<InstancesPage />} exact /> */}
+        <Route path="/instances" element={<Instances />} exact />
       </Routes>
     </Router>
   );
