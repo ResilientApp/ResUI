@@ -1,5 +1,4 @@
 import React from 'react'
-import {ReactComponent as WorkIcon} from '../../images/milestone.svg'
 import {ReactComponent as SchoolIcon} from '../../images/milestone-2.svg'
 import timelineElements from "./timelineElements"
 import "./roadmap.css"
@@ -9,7 +8,6 @@ import "react-vertical-timeline-component/style.min.css";
 const RoadMap = () => {
 
   let workIconStyles= {background: "#03B5AA"};
-  let schoolIconStyles= {background: "#f9c74f"};
 
   return (
     <div>
@@ -29,6 +27,7 @@ const RoadMap = () => {
             key = {element.key}
             date={element.date}
             dateClassName="date"
+            url={element.url}
             iconStyle={workIconStyles}
             icon={<SchoolIcon />}
             >
@@ -42,7 +41,9 @@ const RoadMap = () => {
                   className={`button ${
                     "schoolButton"
                   }`}
-                  href="/"
+                  href={element.url}
+                  target="_blank"
+                  rel="noreferrer"
                 >
                   {element.buttonText}
                 </a>

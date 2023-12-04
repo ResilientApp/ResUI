@@ -1,10 +1,11 @@
 body {
     background: #000;
-    font-family: "Montserrat", sans-serif;
+    margin-top: 80px;
+    /* font-family: "Montserrat", sans-serif;
     font-size: 16px;
     color: rgb(53, 53, 53);
-    margin-top: 80px;
-    color: #03B5AA;
+    margin-top: 80px; */
+    /* color: #03B5AA; */
   }
   
   .title {
@@ -37,6 +38,7 @@ body {
     border: 2px solid #fff; /* Add your desired border color here */
     border-radius: 10px; /* Optional: Add border-radius for rounded corners */
     /*background-color: #3dccc7 */
+    color: #03B5AA;
   }
   
   .date {

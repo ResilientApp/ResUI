@@ -47,7 +47,9 @@ const Navbar = ({ toggle }) => {
       <Nav>
         <NavbarContainer>
           {/* <Link to="/"><NavLogo src={logo}  className="left-logo"/></Link> */}
+          <Link to="/">
           <NavLogo src={logo}  className="left-logo"/>
+          </Link>
           {/* ResilientDB
             </NavLogo> */}
           <MobileIcon onClick={toggle}>
@@ -55,16 +57,16 @@ const Navbar = ({ toggle }) => {
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <NavLinks to="about">About Us</NavLinks>
+              <NavLinks to="/about">About Us</NavLinks>
               <NavDropdown>
-                <NavDropdownLinks to="vision-mission">
+                <NavDropdownLinks to="/vision-mission">
                   Vision & Mission
                 </NavDropdownLinks>
-                <NavDropdownLinks to="meet-the-team">
+                <NavDropdownLinks to="/meet-the-team">
                   Meet the Team
                 </NavDropdownLinks>
                 <NavDropdownLinks to="/roadmap">Roadmap</NavDropdownLinks>
-                <NavDropdownLinks to="publications">
+                <NavDropdownLinks to="/publications">
                   Publications
                 </NavDropdownLinks>
               </NavDropdown>
@@ -72,13 +74,13 @@ const Navbar = ({ toggle }) => {
             <NavItem>
               <NavLinks to="services">Tools & Services</NavLinks>
               <NavDropdown>
-                <NavDropdownLinks to="explorer">Explorer</NavDropdownLinks>
-                <NavDropdownLinks to="monitoring">Monitoring</NavDropdownLinks>
-                <NavDropdownLinks to="deployment">Deployment</NavDropdownLinks>
+                <NavDropdownLinks to="/explorer">Explorer</NavDropdownLinks>
+                <NavDropdownLinks to="/monitoring">Monitoring</NavDropdownLinks>
+                <NavDropdownLinks to="/deployment">Deployment</NavDropdownLinks>
               </NavDropdown>
             </NavItem>
             <NavItem>
-              <NavLinks to="contact">Contact Us</NavLinks>
+              <NavLinks to="/contact">Contact Us</NavLinks>
             </NavItem>
             {user ? (
               <>
