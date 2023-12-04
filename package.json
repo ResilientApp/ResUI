@@ -7,6 +7,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "assert": "^2.1.0",
+    "bcrypt": "^5.1.1",
     "browserify": "^17.0.0",
     "buffer": "^6.0.3",
     "child_process": "^1.0.2",
