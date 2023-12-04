@@ -63,7 +63,7 @@ const Navbar = ({ toggle }) => {
                 <NavDropdownLinks to="meet-the-team">
                   Meet the Team
                 </NavDropdownLinks>
-                <NavDropdownLinks to="roadmap">Roadmap</NavDropdownLinks>
+                <NavDropdownLinks to="/roadmap">Roadmap</NavDropdownLinks>
                 <NavDropdownLinks to="publications">
                   Publications
                 </NavDropdownLinks>

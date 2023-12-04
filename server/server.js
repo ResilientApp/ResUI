@@ -7,7 +7,7 @@ const { MongoClient, ServerApiVersion } = require("mongodb");
 const app = express();
 const port = 5500;
 
-const uri = "mongo-uri";
+const uri = "mongodb+srv://sasha:pimento@cluster0.y7hp6fq.mongodb.net/?retryWrites=true&w=majority";
 
 const client = new MongoClient(uri, {
   serverApi: {
