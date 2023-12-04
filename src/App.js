@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Home from './pages';
+import {RoadMapPage} from './pages/roadmap';
 import { SignUpPage, LogInPage } from './pages/signup';
 import AboutUsPage from './pages/aboutus';
 import Instances from './components/Instances';
@@ -18,6 +19,8 @@ function App() {
         <Route path="/about" element={<AboutUsPage />} exact />
           {/* <Route path="/about/meet-the-team" element={<MeetTheTeamPage />} exact /> */}
         {/* </Route> */}
+        <Route path="/roadmap" element={<RoadMapPage />} exact />
+        {/* <Route path="/instances" element={<InstancesPage />} exact /> */}
         <Route path="/instances" element={<Instances />} exact />
       </Routes>
     </Router>

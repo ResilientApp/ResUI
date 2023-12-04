@@ -159,7 +159,7 @@ export const NavBtnLink = styled(LinkR)`
   }
 `;
 
-export const NavDropdownLinks = styled(LinkS)`
+export const NavDropdownLinks = styled(LinkR)`
   color: #fff;
   display: flex;
   align-items: center;
