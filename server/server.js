@@ -7,7 +7,7 @@ const { MongoClient, ServerApiVersion } = require("mongodb");
 const app = express();
 const port = 5500;
 
-const uri = "mongo-uri";
+const uri = "mongodb+srv://gopuman:Qwerty123@cluster0.y7hp6fq.mongodb.net/?retryWrites=true&w=majority";
 
 const client = new MongoClient(uri, {
   serverApi: {
@@ -106,6 +106,37 @@ app.post("/api/signup", async (req, res) => {
   } catch (error) {
     console.error("Error during signup:", error);
     res.status(500).json({ error: "Internal Server Error" });
+  } finally {
+    await client.close();
+  }
+});
+
+app.post('/api/update-instances', async (req, res) => {
+  try {
+    await client.connect();
+    const database = client.db('resui');
+    const collection = database.collection('instances');
+
+    const { type, containerId, userEmail } = req.body;
+
+    // Assuming you have a field in your MongoDB document for SDK and Resdb counts
+    const updateField = type === 'sdk' ? 'sdk' : 'resdb';
+
+    // Update the count for the specific user
+    const result = await collection.updateOne(
+      { user: userEmail },
+      { $inc: { [updateField]: 1 } }
+    );
+
+    if (result.matchedCount === 0) {
+      // User not found, you might want to handle this case accordingly
+      res.status(404).json({ error: 'User not found' });
+    } else {
+      res.status(200).json({ success: true });
+    }
+  } catch (error) {
+    console.error('Error updating instances:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
   } finally {
     await client.close();
   }

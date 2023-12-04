@@ -1,36 +1,99 @@
 /* Instances.css */
-body {
+
+.instances-body {
   background-color: black;
-  color: #fff; /* White text color */
+  color: #fff;
 }
 
-div {
+.instances-container {
   margin: 20px;
 }
 
-h2 {
-  color: #03b5aa; /* Teal text color */
+.instances-h1 {
+  color: #03b5aa;
 }
 
-table {
+.instances-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
-th, td {
+.instances-th,
+.instances-td {
   border: 1px solid #ddd;
   padding: 12px;
   text-align: left;
 }
 
-th {
-  background-color: #03b5aa; /* Teal background color for header */
-  color: #fff; /* White text color for header */
+.instances-th {
+  background-color: #03b5aa;
+  color: #fff;
 }
 
-tr:hover {
-  background-color: #444; /* Darker background color on hover */
+.instances-tr:hover {
+  background-color: #444;
 }
 
-/* Add more styling as needed */
+/* Styles for the modal */
+
+/* Update the styles for modal overlay and content */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Darken the overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 50px; /* Increase padding for better spacing */
+  border: 1px solid #ddd; /* Lighter border */
+  border-radius: 10px; /* Rounder corners */
+  color: #333; /* Darker text color */
+  width: 500px; /* Wider modal */
+  text-align: left;
+}
+
+/* Styles for the buttons inside the modal content */
+.modal-content button {
+  background-color: #03b5aa; /* Light blue */
+  color: #fff;
+  padding: 12px;
+  margin-top: 15px; /* More spacing between buttons */
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.modal-content button:hover {
+  background-color: #028e80; /* Darker blue on hover */
+}
+
+.add-instances-button {
+  background-color: #03b5aa;
+  color: #fff;
+  padding: 12px;
+  margin-top: 15px; /* More spacing */
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.add-instances-button:hover {
+  background-color: #028e80;
+}
+
+/* Add this style for code blocks inside the modal content */
+.modal-content pre {
+  background-color: #f8f8f8;
+  padding: 15px; /* Increase padding for code blocks */
+  border-radius: 5px;
+  overflow-x: auto;
+  font-family: monospace;
+}
