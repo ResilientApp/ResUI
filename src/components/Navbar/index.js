@@ -14,7 +14,6 @@ import {
   NavDropdownLinks,
 } from "./NavbarElements";
 import logo from "../../images/logo.png";
-import { jwtDecode } from "jwt-decode";
 import { Link } from "react-router-dom";
 
 const Navbar = ({ toggle }) => {
@@ -24,8 +23,7 @@ const Navbar = ({ toggle }) => {
     const token = localStorage.getItem("userToken");
     if (token) {
       try {
-        const decoded = jwtDecode(token);
-        return decoded.email; // Assuming your user information is stored in the 'user' field of the token
+        return token; // Assuming your user information is stored in the 'user' field of the token
       } catch (error) {
         // Invalid token or expired, handle accordingly
         return null;
@@ -89,10 +87,8 @@ const Navbar = ({ toggle }) => {
                   <NavLinks to="/instances">My Instances</NavLinks>
                 </NavItem>
                 <NavItem>
-                  <NavLinks>
-                    <Link to="/instances" style={{ color: "#FFD700" }}>
+                  <NavLinks to="/instances" style={{ color: "#FFD700" }}>
                       Welcome, {user}
-                    </Link>
                   </NavLinks>
                   <NavDropdown>
                     <NavDropdownLinks to="#" onClick={handleLogout}>
