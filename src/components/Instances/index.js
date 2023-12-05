@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../Navbar";
 import "../../styles/Instances.css";
-import { jwtDecode } from "jwt-decode";
 import Modal from "react-modal";
 import ReactMarkdown from "react-markdown";
 
@@ -13,15 +12,14 @@ const Instances = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        let decoded = jwtDecode(userToken);
+        const token = localStorage.getItem("userToken");
 
         const response = await fetch(
-          `http://localhost:5500/api/instances?userEmail=${decoded.email}`,
+          `http://localhost:5500/api/instances?userEmail=${token}`,
           {
             method: "GET",
             headers: {
               "Content-Type": "application/json",
-              Authorization: `Bearer ${userToken}`,
             },
           }
         );
@@ -30,8 +28,14 @@ const Instances = () => {
           throw new Error("Network response was not ok");
         }
 
-        const data = await response.json();
-        setInstancesData(data);
+        const { success, resdb_count, sdk_count } = await response.json();
+
+        if (success) {
+          // Update the structure of instancesData based on the received data
+          setInstancesData([{ user: userToken, resdb: resdb_count, sdk: sdk_count }]);
+        } else {
+          console.error("Error fetching data:", response);
+        }
       } catch (error) {
         console.error("Error fetching data:", error);
       }

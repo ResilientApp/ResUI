@@ -14,7 +14,6 @@ import {
   NavDropdownLinks,
 } from "./NavbarElements";
 import logo from "../../images/logo.png";
-import { jwtDecode } from "jwt-decode";
 import { Link } from "react-router-dom";
 
 const Navbar = ({ toggle }) => {
@@ -24,8 +23,7 @@ const Navbar = ({ toggle }) => {
     const token = localStorage.getItem("userToken");
     if (token) {
       try {
-        const decoded = jwtDecode(token);
-        return decoded.email; // Assuming your user information is stored in the 'user' field of the token
+        return token; // Assuming your user information is stored in the 'user' field of the token
       } catch (error) {
         // Invalid token or expired, handle accordingly
         return null;
@@ -59,14 +57,14 @@ const Navbar = ({ toggle }) => {
             <NavItem>
               <NavLinks to="/about">About Us</NavLinks>
               <NavDropdown>
-                <NavDropdownLinks to="/vision-mission">
+                {/* <NavDropdownLinks to="/vision-mission">
                   Vision & Mission
-                </NavDropdownLinks>
+                </NavDropdownLinks> */}
                 <NavDropdownLinks to="/meet-the-team">
                   Meet the Team
                 </NavDropdownLinks>
                 <NavDropdownLinks to="/roadmap">Roadmap</NavDropdownLinks>
-                <NavDropdownLinks to="/publications">
+                <NavDropdownLinks to="https://expolab.org/#pub">
                   Publications
                 </NavDropdownLinks>
               </NavDropdown>
@@ -74,9 +72,10 @@ const Navbar = ({ toggle }) => {
             <NavItem>
               <NavLinks to="services">Tools & Services</NavLinks>
               <NavDropdown>
-                <NavDropdownLinks to="/explorer">Explorer</NavDropdownLinks>
-                <NavDropdownLinks to="/monitoring">Monitoring</NavDropdownLinks>
-                <NavDropdownLinks to="/deployment">Deployment</NavDropdownLinks>
+                <NavDropdownLinks to="https://github.com/resilientdb/resilientdb" target="_blank">Github</NavDropdownLinks>
+                <NavDropdownLinks to="https://explorer.resilientdb.com/" target="_blank">Explorer</NavDropdownLinks>
+                <NavDropdownLinks to="https://monitoring.resilientdb.com/" target="_blank">Monitoring</NavDropdownLinks>
+                <NavDropdownLinks to="https://prometheus.resilientdb.com/" target="_blank">Deployment</NavDropdownLinks>
               </NavDropdown>
             </NavItem>
             <NavItem>
@@ -88,10 +87,8 @@ const Navbar = ({ toggle }) => {
                   <NavLinks to="/instances">My Instances</NavLinks>
                 </NavItem>
                 <NavItem>
-                  <NavLinks>
-                    <Link to="/instances" style={{ color: "#FFD700" }}>
+                  <NavLinks to="/instances" style={{ color: "#FFD700" }}>
                       Welcome, {user}
-                    </Link>
                   </NavLinks>
                   <NavDropdown>
                     <NavDropdownLinks to="#" onClick={handleLogout}>

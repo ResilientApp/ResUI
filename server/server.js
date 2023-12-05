@@ -1,74 +1,37 @@
 const express = require("express");
-const bcrypt = require("bcrypt");
-const jwt = require("jsonwebtoken");
 const cors = require("cors");
-const { MongoClient, ServerApiVersion } = require("mongodb");
 
 const app = express();
 const port = 5500;
 
-const uri = "<mongo-uri>";
-
-const client = new MongoClient(uri, {
-  serverApi: {
-    version: ServerApiVersion.v1,
-    strict: true,
-    deprecationErrors: true,
-  },
-});
-
 app.use(express.json());
 app.use(cors());
 
-const generateToken = (user) => {
-  return jwt.sign({ userId: user.id, email: user.email }, "your-secret-key", {
-    expiresIn: "1h",
-  });
-};
+const flaskBaseUrl = ""; // Replace with your Flask server IP
 
-app.post("/api/login", async (req, res) => {
+// Function to handle API requests
+const makeApiRequest = async (endpoint, method, data) => {
   try {
-    await client.connect();
-    const database = client.db("resui");
-    const collection = database.collection("users");
+    const response = await fetch(`${flaskBaseUrl}/${endpoint}`, {
+      method: method,
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
 
-    const { email, password } = req.body;
-
-    const user = await collection.findOne({ email });
-
-    if (!user || !(await bcrypt.compare(password, user.password))) {
-      return res.status(401).json({ error: "Invalid credentials" });
+    if (!response.ok) {
+      throw new Error(`Error: ${response.statusText}`);
     }
 
-    const token = generateToken(user);
-    res.json({ token });
+    return response.json();
   } catch (error) {
-    console.error("Error during login:", error);
-    res.status(500).json({ error: "Internal server error" });
-  } finally {
-    await client.close();
+    console.error("API request error:", error);
+    throw error;
   }
-});
+};
 
-app.get("/api/instances", async (req, res) => {
-  const { userEmail } = req.query;
-
-  try {
-    await client.connect();
-    const database = client.db("resui");
-    const collection = database.collection("instances");
-    const instancesData = await collection.find({ user: userEmail }).toArray();
-
-    res.json(instancesData);
-  } catch (error) {
-    console.error("Error fetching data:", error);
-    res.status(500).json({ error: "Internal Server Error" });
-  } finally {
-    await client.close();
-  }
-});
-
-// Endpoint to handle user signup
+// User signup
 app.post("/api/signup", async (req, res) => {
   try {
     const { name, email, password } = req.body;
@@ -79,66 +42,64 @@ app.post("/api/signup", async (req, res) => {
         .json({ error: "Name, email, and password are required" });
     }
 
-    // Connect to the database
-    await client.connect();
-    const database = client.db("resui");
-    const collection = database.collection("users");
+    // Make API request to Flask for user registration
+    const { success, message } = await makeApiRequest("setUser", "POST", { email, password });
+    console.log(success, message);
 
-    // Check if the user already exists
-    const existingUser = await collection.findOne({ email });
-    if (existingUser) {
-      return res.status(400).json({ error: "User already exists" });
+    if (success) {
+      // User registered successfully
+      res.status(200).json({ success: true, message: "User registered successfully" });
+    } else {
+      // Handle other cases
+      res.status(500).json({ success: false, message: "Something went wrong" });
     }
-
-    // Hash the password before storing it
-    const hashedPassword = await bcrypt.hash(password, 10);
-
-    // Insert the new user into the database
-    await collection.insertOne({
-      name,
-      email,
-      password: hashedPassword,
-    });
-
-    res
-      .status(201)
-      .json({ success: true, message: "User registered successfully" });
   } catch (error) {
     console.error("Error during signup:", error);
     res.status(500).json({ error: "Internal Server Error" });
-  } finally {
-    await client.close();
   }
 });
 
-app.post('/api/update-instances', async (req, res) => {
+// User login
+app.post("/api/login", async (req, res) => {
   try {
-    await client.connect();
-    const database = client.db('resui');
-    const collection = database.collection('instances');
+    const { email, password } = req.body;
 
-    const { type, containerId, userEmail } = req.body;
+    // Make API request to Flask for user login
+    const { success, message } = await makeApiRequest("getUser", "POST", { email, password });
+    console.log(success, message);
 
-    // Assuming you have a field in your MongoDB document for SDK and Resdb counts
-    const updateField = type === 'sdk' ? 'sdk' : 'resdb';
-
-    // Update the count for the specific user
-    const result = await collection.updateOne(
-      { user: userEmail },
-      { $inc: { [updateField]: 1 } }
-    );
-
-    if (result.matchedCount === 0) {
-      // User not found, you might want to handle this case accordingly
-      res.status(404).json({ error: 'User not found' });
+    if (success) {
+      // User registered successfully
+      res.status(200).json({ success: true, message: "User logged in successfully", token: email });
     } else {
-      res.status(200).json({ success: true });
+      // Handle other cases
+      res.status(500).json({ success: false, message: "Something went wrong" });
     }
   } catch (error) {
-    console.error('Error updating instances:', error);
-    res.status(500).json({ error: 'Internal Server Error' });
-  } finally {
-    await client.close();
+    console.error("Error during signup:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});
+
+app.get("/api/instances", async (req, res) => {
+  try {
+    const { userEmail } = req.query;
+    console.log(userEmail);
+
+    // Make API request to Flask for getting instances data
+    const { success, resdb, sdk } = await makeApiRequest("getInstances", "POST", { userEmail });
+    // console.log(success, resdb, sdk);
+
+    if (success) {
+      // Instances data fetched successfully
+      res.status(200).json({ success: true, resdb_count: resdb, sdk_count: sdk });
+    } else {
+      // Handle other cases
+      res.status(500).json({ success: false, message: "Something went wrong" });
+    }
+  } catch (error) {
+    console.error("Error getting instances data:", error);
+    res.status(500).json({ error: "Internal Server Error" });
   }
 });
 

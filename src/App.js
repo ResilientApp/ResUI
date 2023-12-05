@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
 import Home from './pages';
-import {RoadMapPage} from './pages/roadmap';
+import { RoadMapPage } from './pages/roadmap';
 import { SignUpPage, LogInPage } from './pages/signup';
-import AboutUsPage from './pages/aboutus';
+import { AboutUsPage, MeetTheTeamPage, PublicationsPage } from './pages/aboutus';
 import Instances from './components/Instances';
 
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
@@ -19,11 +19,11 @@ function App() {
         <Route path="/signup" element={<SignUpPage />} exact />
         <Route path="/login" element={<LogInPage />} exact />
         <Route path="/about" element={<AboutUsPage />} exact />
-          {/* <Route path="/about/meet-the-team" element={<MeetTheTeamPage />} exact /> */}
-        {/* </Route> */}
         <Route path="/roadmap" element={<RoadMapPage />} exact />
         <Route path="/publications" element={<PublicationsPage />} exact />
         <Route path="/contact" element={<ContactsPage />} exact />
+        <Route path="/meet-the-team" element={<MeetTheTeamPage />} exact />
+        <Route path="/publications" element={<PublicationsPage />} exact />
         {/* <Route path="/instances" element={<InstancesPage />} exact /> */}
         <Route path="/instances" element={<Instances />} exact />
       </Routes>
