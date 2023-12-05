@@ -1,10 +1,15 @@
 import AboutUs from '../components/AboutUs';
+import { MeetTheTeam } from '../components/AboutUs/MeetTheTeam';
+import { Publications } from '../components/AboutUs/Publications';
 
-function AboutUsPage() {
-    return (
-        <AboutUs />
-    )
+export const AboutUsPage = () => {
+    return <AboutUs />
 }
 
+export const MeetTheTeamPage = () => {
+    return <MeetTheTeam />
+}
 
-export default AboutUsPage;
+export const PublicationsPage = () => {
+    return <Publications />
+}

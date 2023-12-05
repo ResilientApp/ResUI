@@ -11,10 +11,10 @@ const Footer = () => {
             <FooterLinksWrapper>
                 <FooterLinkItems>
                     <FooterLinkTitle>About Us</FooterLinkTitle>
-                        <FooterLink to="https://expolab.org/">ExpoLab Blog</FooterLink>
+                        <FooterLink to="https://expolab.org/" target="_blank">ExpoLab Blog</FooterLink>
                         <FooterLink to="/about">Meet the Team</FooterLink>
-                        <FooterLink to="https://github.com/resilientdb/resilientdb">Github</FooterLink>
-                        <FooterLink to="https://expolab.org/#service">Terms of Services</FooterLink>
+                        <FooterLink to="https://github.com/resilientdb/resilientdb" target="_blank">Github</FooterLink>
+                        <FooterLink to="https://expolab.org/#service" target="_blank">Terms of Services</FooterLink>
                 </FooterLinkItems>
 
                 {/* <FooterLinkItems>
@@ -29,8 +29,10 @@ const Footer = () => {
             <FooterLinksWrapper>
                 <FooterLinkItems>
                     <FooterLinkTitle>Contact Us</FooterLinkTitle>
-                        <FooterLink to="/about">Contact</FooterLink>
-                        <FooterLink to="/about">Support</FooterLink>
+                        {/* <FooterLink to="/about">Contact</FooterLink>
+                        <FooterLink to="/about">Support</FooterLink> */}
+                        <FooterLink to="info@resilientdb.com">info@resilientdb.com</FooterLink>
+                        <FooterLink to="support@resilientdb.com">support@resilientdb.com</FooterLink>
                 </FooterLinkItems>
             {/* to add social media links */}
             {/* <FooterLinkItems>

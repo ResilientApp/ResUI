@@ -1,0 +1,89 @@
+body {
+    background: #000;
+    margin-top: 80px;
+    /* font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    color: rgb(53, 53, 53);
+    margin-top: 80px; */
+    /* color: #03B5AA; */
+  }
+  
+  .title {
+    font-size: 15em;
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+    margin-bottom: 80px;
+  }
+
+  .pageTitle{
+    margin-bottom: 80px;
+  }
+  
+  h3 {
+    padding-top: 0.25em;
+  }
+
+  .vertical-timeline-element{
+    margin-top: 80px;
+  }
+  
+  .vertical-timeline-element 
+  .vertical-timeline-element-content {
+    
+    box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25),
+      0 0.4em 1.25em 0 rgba(0, 0, 0, 0.15) !important;
+    padding: 2em 3em !important;
+    /* background-color:  #26282A; */
+    background-color: #000;
+    border: 2px solid #fff; /* Add your desired border color here */
+    border-radius: 10px; /* Optional: Add border-radius for rounded corners */
+    /*background-color: #3dccc7 */
+    color: #03B5AA;
+  }
+  
+  .date {
+    color: rgb(201, 251, 255);
+  }
+  
+  #description {
+    margin: 1.5em 0 2em 0;
+  }
+  
+  .button {
+    text-decoration: none; 
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    color: #000 ;
+   
+
+  }
+
+  
+  .workButton {
+    background-color: #06d6a0;
+  }
+  
+  .workButton:hover {
+    background-color: #0ac593;
+  }
+  
+  .schoolButton {
+    background-color: #03B5AA;
+    color: #000
+  }
+  
+  .schoolButton:hover {
+    background-color: #037971;
+    color: #fff
+  }
+  
+  @media only screen and (max-width: 1700px) {
+    .vertical-timeline-element-date {
+      display: block !important;
+      float: none !important;
+      color: #03B5AA;
+      font-size: 20px;
+      /* color: rgb(44, 44, 44); */
+      margin-top: 1.5em;
+    }
+  }
