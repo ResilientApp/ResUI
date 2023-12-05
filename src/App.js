@@ -8,7 +8,6 @@ import Instances from './components/Instances';
 
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import { ContactsPage } from './pages/contact';
-import { PublicationsPage } from './pages/publications';
 
 
 function App() {
