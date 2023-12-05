@@ -64,18 +64,18 @@ const Navbar = ({ toggle }) => {
                   Meet the Team
                 </NavDropdownLinks>
                 <NavDropdownLinks to="/roadmap">Roadmap</NavDropdownLinks>
-                <NavDropdownLinks to="https://expolab.org/#pub">
+                <NavDropdownLinks to="/publications">
                   Publications
                 </NavDropdownLinks>
               </NavDropdown>
             </NavItem>
             <NavItem>
-              <NavLinks to="services">Tools & Services</NavLinks>
+              <NavLinks to="/">Tools & Services</NavLinks>
               <NavDropdown>
                 <NavDropdownLinks to="https://github.com/resilientdb/resilientdb" target="_blank">Github</NavDropdownLinks>
                 <NavDropdownLinks to="https://explorer.resilientdb.com/" target="_blank">Explorer</NavDropdownLinks>
                 <NavDropdownLinks to="https://monitoring.resilientdb.com/" target="_blank">Monitoring</NavDropdownLinks>
-                <NavDropdownLinks to="https://prometheus.resilientdb.com/" target="_blank">Deployment</NavDropdownLinks>
+                <NavDropdownLinks to="https://prometheus.resilientdb.com/" target="_blank">Prometheus</NavDropdownLinks>
               </NavDropdown>
             </NavItem>
             <NavItem>

@@ -206,6 +206,7 @@ export function MeetTheTeam() {
                 </TeamAlumni>
 
                 <AboutH2>CONNECT US!</AboutH2>
+                <AboutP>Click on the photo to view our LinkedIn!</AboutP>
             </MeetTheTeamContainer>
         
             <Footer />
