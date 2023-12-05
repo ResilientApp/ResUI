@@ -182,7 +182,7 @@ export function Contacts() {
                     </div>
                 ))}
             </ContactBox>
-            <GitLinkBox href="https://github.com/gopuman/ResUI"><GithubIcon /> Github Repository Reference</GitLinkBox>
+            <GitLinkBox href="https://github.com/gopuman/ResUI" target="_blank"><GithubIcon /> Github Repository Reference</GitLinkBox>
         </>
     )
 }

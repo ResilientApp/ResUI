@@ -21,7 +21,7 @@ const AboutUs = () => {
         <Navbar toggle={toggle} />
   
         <AboutContainer>
-          <AboutH1>Who are we?</AboutH1>
+          {/* <AboutH1>Who are we?</AboutH1> */}
           <MissionVision />
           {/* <MeetTheTeam /> */}
           {/* <Roadmap />
