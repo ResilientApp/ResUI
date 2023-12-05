@@ -29,10 +29,10 @@ const Footer = () => {
             <FooterLinksWrapper>
                 <FooterLinkItems>
                     <FooterLinkTitle>Contact Us</FooterLinkTitle>
-                        {/* <FooterLink to="/about">Contact</FooterLink>
-                        <FooterLink to="/about">Support</FooterLink> */}
-                        <FooterLink to="info@resilientdb.com">info@resilientdb.com</FooterLink>
-                        <FooterLink to="support@resilientdb.com">support@resilientdb.com</FooterLink>
+                    <FooterLink to="/contact">Contact</FooterLink>
+                    {/* <FooterLink to="/about">Support</FooterLink> */}
+                    <FooterLink to="mailto:info@resilientdb.com">info@resilientdb.com</FooterLink>
+                    <FooterLink to="mailto:support@resilientdb.com">support@resilientdb.com</FooterLink>
                 </FooterLinkItems>
             {/* to add social media links */}
             {/* <FooterLinkItems>

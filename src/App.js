@@ -20,6 +20,8 @@ function App() {
         <Route path="/login" element={<LogInPage />} exact />
         <Route path="/about" element={<AboutUsPage />} exact />
         <Route path="/roadmap" element={<RoadMapPage />} exact />
+        <Route path="/publications" element={<PublicationsPage />} exact />
+        <Route path="/contact" element={<ContactsPage />} exact />
         <Route path="/meet-the-team" element={<MeetTheTeamPage />} exact />
         {/* <Route path="/publications" element={<PublicationsPage />} exact /> */}
         <Route path="/publications" element={<PublicationsPage />} exact />
