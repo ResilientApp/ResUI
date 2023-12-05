@@ -59,14 +59,14 @@ const Navbar = ({ toggle }) => {
             <NavItem>
               <NavLinks to="/about">About Us</NavLinks>
               <NavDropdown>
-                <NavDropdownLinks to="/vision-mission">
+                {/* <NavDropdownLinks to="/vision-mission">
                   Vision & Mission
-                </NavDropdownLinks>
+                </NavDropdownLinks> */}
                 <NavDropdownLinks to="/meet-the-team">
                   Meet the Team
                 </NavDropdownLinks>
                 <NavDropdownLinks to="/roadmap">Roadmap</NavDropdownLinks>
-                <NavDropdownLinks to="/publications">
+                <NavDropdownLinks to="https://expolab.org/#pub">
                   Publications
                 </NavDropdownLinks>
               </NavDropdown>
@@ -74,9 +74,10 @@ const Navbar = ({ toggle }) => {
             <NavItem>
               <NavLinks to="services">Tools & Services</NavLinks>
               <NavDropdown>
-                <NavDropdownLinks to="/explorer">Explorer</NavDropdownLinks>
-                <NavDropdownLinks to="/monitoring">Monitoring</NavDropdownLinks>
-                <NavDropdownLinks to="/deployment">Deployment</NavDropdownLinks>
+                <NavDropdownLinks to="https://github.com/resilientdb/resilientdb" target="_blank">Github</NavDropdownLinks>
+                <NavDropdownLinks to="https://explorer.resilientdb.com/" target="_blank">Explorer</NavDropdownLinks>
+                <NavDropdownLinks to="https://monitoring.resilientdb.com/" target="_blank">Monitoring</NavDropdownLinks>
+                <NavDropdownLinks to="https://prometheus.resilientdb.com/" target="_blank">Deployment</NavDropdownLinks>
               </NavDropdown>
             </NavItem>
             <NavItem>
