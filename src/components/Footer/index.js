@@ -29,7 +29,7 @@ const Footer = () => {
             <FooterLinksWrapper>
                 <FooterLinkItems>
                     <FooterLinkTitle>Contact Us</FooterLinkTitle>
-                        <FooterLink to="/about">Contact</FooterLink>
+                        <FooterLink to="/contact">Contact</FooterLink>
                         <FooterLink to="/about">Support</FooterLink>
                 </FooterLinkItems>
             {/* to add social media links */}

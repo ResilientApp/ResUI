@@ -7,6 +7,8 @@ import AboutUsPage from './pages/aboutus';
 import Instances from './components/Instances';
 
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import { ContactsPage } from './pages/contact';
+import { PublicationsPage } from './pages/publications';
 
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
           {/* <Route path="/about/meet-the-team" element={<MeetTheTeamPage />} exact /> */}
         {/* </Route> */}
         <Route path="/roadmap" element={<RoadMapPage />} exact />
+        <Route path="/publications" element={<PublicationsPage />} exact />
+        <Route path="/contact" element={<ContactsPage />} exact />
         {/* <Route path="/instances" element={<InstancesPage />} exact /> */}
         <Route path="/instances" element={<Instances />} exact />
       </Routes>
