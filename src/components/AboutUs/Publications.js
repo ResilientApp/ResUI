@@ -83,7 +83,7 @@ const publications = [
         url: "http://www.vldb.org/pvldb/vol13/p2893-rahnama.pdf",
     },
     {
-        title: "Archietctural Lessons Learned",
+        title: "Architectural Lessons Learned",
         url: "https://arxiv.org/abs/1911.09208",
     },
     {

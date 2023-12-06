@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import resilientDBLogo from '../../images/resilientdb_logo.svg';
 import { GlobalStyle, ImageContainer, LogoImage, SignUpForm, SignUpH2, SignUpInput, ButtonsContainer, SignUpButtons } from './SignUpElements';
 import { Link } from 'react-router-dom';
+import swal from 'sweetalert';
 
 const SignUp = () => {
   // State variables
@@ -38,7 +39,7 @@ const SignUp = () => {
       const data = await response.json();
 
       if (response.ok) {
-        alert(data.message);
+        swal(data.message);
         // Redirect to login page or perform other actions
       } else {
         alert(`Error: ${data.error}`);

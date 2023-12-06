@@ -45,6 +45,12 @@ export const AboutH3 = styled.h3`
 export const AboutP = styled.p`
     color: #FFFFFF;
     font-size: 20px;
+
+    &.video{
+        text-align: justify;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
 `
 
 export const TealSpan = styled.span`
