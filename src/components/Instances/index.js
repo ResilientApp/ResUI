@@ -65,40 +65,56 @@ const Instances = () => {
   const instructions = `
   # Install resdb-cli
 
-  To use \`resdb-cli\`, you can download the binary from the [Releases](https://github.com/gopuman/resdb-cli/releases) page on GitHub.
+  \n\n
 
-  1. Go to the [Releases](https://github.com/gopuman/resdb-cli/releases) page.
-  2. Download the latest release for your operating system (e.g., \`resdb-cli-linux\` for Linux).
-  3. Make the downloaded binary executable:
-  
-      \`\`\`bash
-      chmod +x resdb-cli
-      \`\`\`  
+  To use \`resdb-cli\`, you can download the binary from the [Releases](https://github.com/gopuman/resdb-cli/releases) on the GitHub repo.
 
-  ### Log in to your account
+
+  ### Run the command appropriate for your operating system:
 
   \`\`\`bash
-  resdb-cli login
+  wget https://github.com/gopuman/resdb-cli/releases/download/v1.0/resdb-cli-linux
+  wget https://github.com/gopuman/resdb-cli/releases/download/v1.0/resdb-cli-mac
+  \`\`\`  
+
+  ### Make the downloaded binary executable:
+  
+  \`\`\`bash
+  mv resdb-cli-mac resdb-cli
+  chmod +x resdb-cli
+  \`\`\`  
+
+  ### Log in to your account. Enter email and password when prompted.
+
+  \`\`\`bash
+  ./resdb-cli login
   \`\`\`
 
-  ### Create ResDB instance
+  ### Create ResDB instance 
 
   \`\`\`bash
-  resdb create instance
+  ./resdb-cli create-instance resdb
   \`\`\`
 
   ### Create SDK instance
 
   \`\`\`bash
-  resdb create sdk
+  ./resdb-cli create-instance sdk
   \`\`\`
   `;
 
   return (
     <>
       <Navbar />
+      <div className="iframe-container">
+            <iframe
+                            src={"http://localhost:3000/d/a792ac8b-bfd6-494d-9259-902365b007b4/resilientdb?orgId=1&var-job=All"} 
+                            title="Dashboard"
+                            className="dashboard-frame"
+            />
+        </div>  
       <div className="instances-container">
-        <h1 className="instances-h1">Instances</h1>
+        {/* <h1 className="instances-h1">Instances</h1> */}
         <table className="instances-table">
           <thead>
             <tr>
@@ -133,7 +149,7 @@ const Instances = () => {
         >
           <ReactMarkdown>{instructions}</ReactMarkdown>
           <button onClick={closeModal}>Close</button>
-        </Modal>
+        </Modal>    
       </div>
     </>
   );
