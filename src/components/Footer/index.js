@@ -20,7 +20,7 @@ const Footer = () => {
                 {/* <FooterLinkItems>
                     <FooterLinkTitle>About Us</FooterLinkTitle>
                         <FooterLink to="/signin">Contact Us</FooterLink>
-                        <FooterLink to="/signin">ExpoLab Blog</FooterLink>https://ucdavis.zoom.us/j/92524043193
+                        <FooterLink to="/signin">ExpoLab Blog</FooterLink>
                         <FooterLink to="/signin">Github</FooterLink>
                         <FooterLink to="/signin">Terms of Services</FooterLink>
                 </FooterLinkItems> */}
