@@ -31,6 +31,7 @@ export const AboutH2 = styled.h2`
     padding: 1%;
     padding-top: 5%;
     color: #FFFFFF95;
+    font-size: 30px;
     font-weight: thin;
     font-family: 'Josefin Slab', serif;
 `
@@ -43,6 +44,7 @@ export const AboutH3 = styled.h3`
 
 export const AboutP = styled.p`
     color: #FFFFFF;
+    font-size: 20px;
 `
 
 export const TealSpan = styled.span`

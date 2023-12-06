@@ -21,7 +21,7 @@ const AboutUs = () => {
         <Navbar toggle={toggle} />
   
         <AboutContainer>
-          <AboutH1>Who are we?</AboutH1>
+          {/* <AboutH1>Who are we?</AboutH1> */}
           <MissionVision />
           {/* <MeetTheTeam /> */}
           {/* <Roadmap />
@@ -59,14 +59,14 @@ const AboutUs = () => {
             <AboutCard>
               {/* <Link to="/publications"> */}
               <AboutH2>PUBLICATIONS</AboutH2> 
-              <Link to="https://expolab.org/#pub">
+              <Link to="/publications">
                 <AboutIcon src={bookIcon} />
               </Link>
               <AboutP>
                 From research to revelation - our publications echo the symphony of discovery.
               </AboutP>
               <AboutBtnWrapper>
-                <Button to="https://expolab.org/#pub">Learn More</Button>
+                <Button to="/publications">Learn More</Button>
               </AboutBtnWrapper>
             </AboutCard>
             

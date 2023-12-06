@@ -63,7 +63,7 @@ export const VideoBox = styled.div`
         height: 550px;
         width: 1450px;
         padding-bottom: 40%;
-        padding-top: 10%;
+        // padding-top: 10%;
         border: none;
     }
 `
@@ -76,6 +76,7 @@ const VideoFrame = styled.iframe`
     width: 90%;
     position: absolute;
     border-radius: 10px;
+    border: none;
 
     &.missionVideo {
         left: 25%;
