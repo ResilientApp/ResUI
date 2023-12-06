@@ -7,7 +7,7 @@ const port = 5500;
 app.use(express.json());
 app.use(cors());
 
-const flaskBaseUrl = "http://104.154.189.181:8080"; // Replace with your Flask server IP
+const flaskBaseUrl = ""; // Replace with your Flask server IP
 
 // Function to handle API requests
 const makeApiRequest = async (endpoint, method, data) => {
