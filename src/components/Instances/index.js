@@ -9,6 +9,21 @@ const Instances = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const userToken = localStorage.getItem("userToken");
 
+  const [user, setUser] = useState(getUserFromToken()); // Set user state
+
+  function getUserFromToken() {
+    const token = localStorage.getItem("userToken");
+    if (token) {
+      try {
+        return token; // Assuming your user information is stored in the 'user' field of the token
+      } catch (error) {
+        // Invalid token or expired, handle accordingly
+        return null;
+      }
+    }
+    return null;
+  }
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -106,15 +121,21 @@ const Instances = () => {
   return (
     <>
       <Navbar />
-      <div className="iframe-container">
-            <iframe
-                            src={"http://localhost:3000/d/a792ac8b-bfd6-494d-9259-902365b007b4/resilientdb?orgId=1&var-job=All"} 
-                            title="Dashboard"
-                            className="dashboard-frame"
-            />
-        </div>  
+      { user == "l" ? (
+        <>
+        <div className="iframe-container">
+        <iframe
+          src={"http://localhost:3000/d/a792ac8b-bfd6-494d-9259-902365b007b4/resilientdb?orgId=1&var-job=All&from=now-24h&to=now"} 
+          title="Dashboard"
+          className="dashboard-frame"
+        />
+        </div>
+        </>
+      ): (
+          <>
+          </>
+        )}
       <div className="instances-container">
-        {/* <h1 className="instances-h1">Instances</h1> */}
         <table className="instances-table">
           <thead>
             <tr>
