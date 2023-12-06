@@ -10,7 +10,7 @@ export function MissionVision() {
                 <VideoTopRow>
                     <VideoBox className="missionBox">
                         <AboutH2>OUR MISSION</AboutH2>
-                        <AboutP>
+                        <AboutP className="video">
                             The inception of Bitcoin and blockchain have renewed the vision of a democratic 
                             and decentralized computational paradigm, that is, to ingrain privacy, integrity, 
                             transparency, and accountability into the very fabric of the computational model. 
@@ -32,7 +32,7 @@ export function MissionVision() {
                 <VideoBottomRow>
                     <VideoBox>
                         <AboutH2>OUR VISION</AboutH2>
-                        <AboutP>
+                        <AboutP className="video">
                         Re-imagining democratization and decentralization in building, <TealSpan> ResilientDB</TealSpan>, 
                         a sustainable blockchain ecosystem, developed and deployed at planet-scale using bare metal 
                         infrastructure generously offered by Oracle Cloud.
@@ -42,7 +42,7 @@ export function MissionVision() {
 
                     <VideoBox>
                         <AboutH2>OUR NEXRES</AboutH2>
-                        <AboutP>
+                        <AboutP className="video">
                         Our mission led by Prof. Mohammad Sadoghi is to pioneer a new distributed ledger—referred 
                         to as <TealSpan> ResilientDB</TealSpan>—that unifies secure transactional and real-time 
                         analytical processing, all centered around a democratic and decentralized computational 
