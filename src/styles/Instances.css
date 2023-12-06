@@ -1,7 +1,5 @@
-/* Instances.css */
-
 .instances-body {
-  background-color: black;
+  background-color: #111217;
   color: #fff;
 }
 
@@ -56,7 +54,7 @@
   border: 1px solid #ddd; /* Lighter border */
   border-radius: 10px; /* Rounder corners */
   color: #333; /* Darker text color */
-  width: 500px; /* Wider modal */
+  width: 800px; /* Wider modal */
   text-align: left;
 }
 
@@ -96,4 +94,19 @@
   border-radius: 5px;
   overflow-x: auto;
   font-family: monospace;
+}
+
+.dashboard-frame {
+  position: relative;
+  width: 100%; /* Adjust the width as needed */
+  height: 1000px; /* Adjust the height as needed */
+  border: none; /* Remove iframe border */
+  margin-top: 20px; /* Add margin for spacing */
+  top: -100px;
+}
+
+.iframe-container {
+  /* width: 500px; */
+  height: 1000px;
+  overflow: hidden;
 }
