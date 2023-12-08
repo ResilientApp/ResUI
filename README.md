@@ -8,9 +8,9 @@ Run the following commands on your terminal to see if you already have Node.js a
 ### `npm -v`
 
 If you don't, you can use one of the following tutorials to get them: 
-##### [Linux](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
-##### [Windows](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
-##### [MacOS](https://treehouse.github.io/installation-guides/mac/node-mac.html)
+#### [Linux](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+#### [Windows](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+#### [MacOS](https://treehouse.github.io/installation-guides/mac/node-mac.html)
 
 ## Available Scripts
 
