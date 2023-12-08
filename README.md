@@ -1,80 +1,54 @@
-# Getting Started with Create React App
+# ResUI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to ResUI, the user-friendly interface for ResilientDB. This project aims to enhance the user experience of ResilientDB by providing a streamlined and intuitive graphical user interface (GUI). The ResUI project includes features such as SignUp and Login functionality, an Instances page, and a monitoring dashboard. This README file will guide you through the installation, setup, and usage of ResUI.
 
-## Ensuring npm works on your terminal
-Run the following commands on your terminal to see if you already have Node.js and npm installed: 
-### `node -v`
-### `npm -v`
+## Project Overview
 
-If you don't, you can use one of the following tutorials to get them: 
-#### [Linux](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
-#### [Windows](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
-#### [MacOS](https://treehouse.github.io/installation-guides/mac/node-mac.html)
+ResilientDB is a groundbreaking blockchain technology developed at the ExpoLab at UC Davis. It utilizes innovative consensus protocols like GeoBFT, Proof Of Execution, RCC, Spotless, among others. ResilientDB offers a wide range of interfaces, including Key-Value store and Python SDK, making it a versatile system. The project not only enables decentralized and democratized transactions but also supports Grafana for plotting monitoring data.
 
-## Available Scripts
+## ResUI Features
 
-In the project directory, you can run: 
+- **User-Friendly Interface:** ResUI simplifies navigation for first-time users by presenting ResilientDB's features in a systematic manner, reducing on-screen clutter.
+- **Authentication:** SignUp and Login functionality to secure user access and interactions.
+- **Instances Page:** Authenticated users can view the number of ResDB and SDK instances they are running.
+- **Monitoring Dashboard:** Provides a graphical representation of metrics associated with ResDB instances.
+- **resdb-cli:** Command-line interface for interacting with ResilientDB, compatible with macOS and Linux.
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Follow the steps below to get ResUI up and running on your local machine.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
 
-### `npm test`
+Make sure you have the following installed:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js
+- npm
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the ResUI repository:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   git clone https://github.com/gopuman/ResUI.git
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Navigate to the project directory:
 
-### `npm run eject`
+   ```bash
+    cd ResUI
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Install dependencies and start the server:
+   ```bash
+    npm install
+    cd server
+    node server.js
+    ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Run the frontend component:
+   ```bash
+    npm start
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration 
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
- 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+5. Open your browser and go to http://localhost:3000 to access ResUI.
