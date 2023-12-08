@@ -10,7 +10,7 @@ const PublicationHeadingBox = styled.h1`
     border-radius: 50px;
     font-size: 20px;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     background: #03B5AA;
     color: #eee;
 `;
@@ -25,16 +25,42 @@ const PublicationBox = styled.div`
     gap: 20px;
 
     a {
+        background: #eee;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         height: auto;
-        width: 135px;
+        min-height: 225px;
+        width: 140px;
         padding: 20px;
-        box-shadow: 0 1px 3px rgba(255,255,255,0.9);
         transition: all 0.2s ease-in-out;
         text-decoration: none;
+        position: relative;
+        border: 4px solid #03B5AA;
+
+        &:before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-bottom: 32px solid #03B5AA;
+            border-right: 32px solid transparent;
+            top: -4px;
+            right: -4px;
+        }
+        
+        &:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-top: 32px solid #000;
+            border-left: 32px solid transparent;
+            top: -4px;
+            right: -4px;
+        }
+          
 
         * {
             text-decoration: none;
@@ -52,15 +78,18 @@ const PublicationBox = styled.div`
             height: 100%;
             width: 100%;
             color: #54afa7;
+            display: none;
         }
 
         p {
             font-size: 14px;
             line-height: 1.5715;
             padding-top: 8px;
-            color: #eee;
+            color: #222;
+            font-weight: bold;
             margin-bottom: 0;
             margin-top: 10px;
+            text-align: center;
         }
 
         span {
@@ -151,7 +180,7 @@ export function Publications() {
                     <a href={url} target='_blank'>
                         <PdfIcon />
                         <p>{title}</p>
-                        <span>{subtext}</span>
+                        {subtext && <span>{subtext}</span>}
                     </a>
                 ))}
             </PublicationBox>
