@@ -151,7 +151,7 @@ const contacts = [
         name: "Rishika Garg",
         image: rishika,
         linkedin: "https://www.linkedin.com/in/rishika-garg-702a79192/",
-        email: "risgarg@ucdavis.ede",
+        email: "risgarg@ucdavis.edu",
     },
 ]
 
