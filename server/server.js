@@ -7,7 +7,7 @@ const port = 5500;
 app.use(express.json());
 app.use(cors());
 
-const flaskBaseUrl = ""; // Replace with your Flask server IP
+const flaskBaseUrl = "https://server.resilientdb.com"; // Replace with your Flask server IP
 
 // Function to handle API requests
 const makeApiRequest = async (endpoint, method, data) => {
@@ -55,7 +55,7 @@ app.post("/api/signup", async (req, res) => {
     }
   } catch (error) {
     console.error("Error during signup:", error);
-    res.status(500).json({ error: "Internal Server Error" });
+    res.status(500).json({ error: "User already exists" });
   }
 });
 
@@ -69,7 +69,7 @@ app.post("/api/login", async (req, res) => {
     console.log(success, message);
 
     if (success) {
-      // User registered successfully
+      // User login successful
       res.status(200).json({ success: true, message: "User logged in successfully", token: email });
     } else {
       // Handle other cases

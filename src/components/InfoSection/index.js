@@ -15,7 +15,7 @@ const InfoSection = ({lightBg,id,imgStart,topLine,headline,lightText,darkText,de
                             <Heading lightText={lightText}>{headline}</Heading>
                             <Subtitle darkText={darkText}>{description}</Subtitle>
                             <BtnWrap>
-                                <Button to="about" 
+                                <Button to="https://resilientdb.incubator.apache.org/" 
                                 smooth={true}
                                 duration={500}
                                 spy={true}

@@ -8,7 +8,7 @@ export const homeObjOne = {
     topLine: 'Blockchain Evolution',
     headline:'Revolutionizing Blockchain for Performance',
     description: 'Explore blockchain\'s evolution with ResilientDB - a reimagined fabric embedding privacy, integrity, and high-performance across global infrastructure.',
-    buttonLabel: 'Get started',
+    buttonLabel: 'Check out ResilientDB',
     imgStart: false,
     // img: require('../../images/global.svg'),
     img: globalImage,
