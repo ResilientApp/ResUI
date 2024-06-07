@@ -11,7 +11,7 @@ const LogIn = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await fetch('https://resui-backend.resilientdb.com/api/login', {
+      const response = await fetch('https://resui.resilientdb.com/api/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
