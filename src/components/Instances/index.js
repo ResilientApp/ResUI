@@ -30,7 +30,7 @@ const Instances = () => {
         const token = localStorage.getItem("userToken");
 
         const response = await fetch(
-          `http://localhost:5500/api/instances?userEmail=${token}`,
+          `https://resui.resilientdb.com/api/instances?userEmail=${token}`,
           {
             method: "GET",
             headers: {
