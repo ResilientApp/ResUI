@@ -5,8 +5,10 @@ const fetch = require("node-fetch");
 const app = express();
 const port = 5500;
 
-app.use(express.json());
 app.use(cors());
+app.options('*', cors());
+
+app.use(express.json());
 
 const flaskBaseUrl = "https://server.resilientdb.com"; // Replace with your Flask server IP
 
