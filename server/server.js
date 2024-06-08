@@ -106,6 +106,10 @@ app.get("/api/instances", async (req, res) => {
   }
 });
 
+app.get("/api/test", async (req, res) => {
+  res.status(200).json({ status: "Hello world!" });
+})
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
