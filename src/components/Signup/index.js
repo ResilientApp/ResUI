@@ -24,7 +24,7 @@ const SignUp = () => {
     // Send signup request to the server
     try {
       console.log(name, email, password);
-      const response = await fetch('/api/signup', {
+      const response = await fetch('https://resui-backend.resilientdb.com/api/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
