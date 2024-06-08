@@ -84,6 +84,7 @@
     ]
   },
   "devDependencies": {
+    "http-proxy-middleware": "^3.0.0",
     "react-app-rewired": "^2.2.1"
   }
 }
