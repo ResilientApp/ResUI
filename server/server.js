@@ -1,6 +1,6 @@
-const express = require("express");
-const cors = require("cors");
-const fetch = (await import('node-fetch')).default;
+import express from 'express';
+import cors from 'cors';
+import fetch from 'node-fetch';
 
 const app = express();
 const port = 5500;
